@@ -2,7 +2,7 @@ import youtubeSearch from "simple-youtube-api";
 
 const API_KEY = "";
 // AIzaSyCLcupFcD0r3cnej5i-JSKozCoqVkkel1E
-export const getPopularList = async () => {
+export const getTechnoList = async () => {
   const ob = new youtubeSearch(API_KEY);
 
   const data = await ob.searchVideos("techno+house", 5).catch((e) => {
@@ -12,7 +12,7 @@ export const getPopularList = async () => {
   return await data;
 };
 
-export const getBollywoodLongSongs = async () => {
+export const getPrydaSongs = async () => {
   const ob = new youtubeSearch(API_KEY);
 
   const data = await ob.searchVideos("eric+prydz", 5).catch((e) => {
@@ -22,7 +22,7 @@ export const getBollywoodLongSongs = async () => {
   return await data;
 };
 
-export const getHollywoodSongs = async () => {
+export const getTechSongs = async () => {
   const ob = new youtubeSearch(API_KEY);
 
   const data = await ob.searchVideos("boris+brejha", 5).catch((e) => {
@@ -32,7 +32,7 @@ export const getHollywoodSongs = async () => {
   return await data;
 };
 
-export const getGhazalList = async () => {
+export const getHouseList = async () => {
   const ob = new youtubeSearch(API_KEY);
 
   const data = await ob.searchVideos("tech+house", 5).catch((e) => {

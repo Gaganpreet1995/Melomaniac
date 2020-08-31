@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import {
-  getPopularList,
-  getBollywoodLongSongs,
-  getHollywoodSongs,
-  getGhazalList,
+  getTechnoList,
+  getPrydaSongs,
+  getTechSongs,
+  getHouseList,
 } from "../API/Youtube";
 import { AiFillPlayCircle } from "react-icons/ai";
 import Slide from "../Slides/Slides";
@@ -31,10 +31,10 @@ export default class videolist extends Component {
 
   componentDidMount = async () => {
     try {
-      await this.getPopularList();
-      await this.getBollywoodBunchSongs();
-      await this.getHollywoodSongs();
-      await this.getGazals();
+      await this.getTechnoList();
+      await this.getPrydaSongs();
+      await this.getTechSongs();
+      await this.getHouseList();
     } catch (e) {
       setTimeout(() => {
         window.location.reload();
@@ -43,8 +43,8 @@ export default class videolist extends Component {
     }
   };
 
-  getPopularList = async () => {
-    var trendingList = await getPopularList();
+  getTechnoList = async () => {
+    var trendingList = await getTechnoList();
     console.log(trendingList);
     const data = [];
 
@@ -59,8 +59,8 @@ export default class videolist extends Component {
     await this.setState({ popular: data });
   };
 
-  getBollywoodBunchSongs = async () => {
-    const list = await getBollywoodLongSongs();
+  getPrydaSongs = async () => {
+    const list = await getPrydaSongs();
     console.log(list);
     const data = [];
 
@@ -75,8 +75,8 @@ export default class videolist extends Component {
     await this.setState({ bollywood: data });
   };
 
-  getHollywoodSongs = async () => {
-    const list = await getHollywoodSongs();
+  getTechSongs = async () => {
+    const list = await getTechSongs();
 
     const data = [];
 
@@ -91,8 +91,8 @@ export default class videolist extends Component {
     await this.setState({ hollywood: data });
   };
 
-  getGazals = async () => {
-    var list = await getGhazalList();
+  getHouseList = async () => {
+    const list = await getHouseList();
 
     const data = [];
 
@@ -116,7 +116,7 @@ export default class videolist extends Component {
         loading: true,
       });
 
-      var songUrl = await axios(`http://localhost:5000/download?URL=${songId}`);
+      let songUrl = await axios(`http://localhost:5000/download?URL=${songId}`);
 
       await this.setState({
         playerSongUrl: songUrl.data,
@@ -140,7 +140,7 @@ export default class videolist extends Component {
   };
 
   render() {
-    var settings = {
+    let settings = {
       dots: true,
       infinite: true,
       slidesToShow: 3,

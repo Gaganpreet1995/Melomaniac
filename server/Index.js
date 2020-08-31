@@ -12,7 +12,7 @@ app
 
     ytdl.getInfo(URL).then((info) => {
       const format = ytdl.filterFormats(info.formats, "audioonly");
-      console.log("format", format);
+
       res.json(format[1].url);
     });
   })
