@@ -10,7 +10,7 @@ import "./Slides.css";
 
 export default class slides extends Component {
   render() {
-    var settings = {
+    let settings = {
       dots: true,
       infinite: true,
       slidesToShow: 3,
@@ -63,7 +63,6 @@ export default class slides extends Component {
         <div>
           <h4
             style={{
-              // borderBottom: "#00BFFF solid 5px ",
               display: "inline-block",
               padding: 3,
             }}

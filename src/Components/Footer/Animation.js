@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AnimateOnChange } from "react-animation";
 import styled from "styled-components";
 
@@ -37,11 +37,11 @@ export default () => {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(nextItem(current));
       nextTextRef.current.innerText = words[nextItem(current)];
-      const nextTextSize = nextTextRef.current.offsetWidth;
+      // const nextTextSize = nextTextRef.current.offsetWidth;
       setCurrentWidth(nextTextRef.current.offsetWidth);
       setCurrentTextStyle({
         opacity: 0,
