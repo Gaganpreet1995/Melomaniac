@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const ytdl = require("ytdl-core");
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 app
   .use(cors())
@@ -11,7 +11,7 @@ app
     const URL = req.query.URL;
 
     ytdl.getInfo(URL).then((info) => {
-      const format = ytdl.filterFormats(info.formats, "audioonly");
+      const format = ytdl.filterFormats(info.formats, "videoonly");
 
       res.json(format[1].url);
     });

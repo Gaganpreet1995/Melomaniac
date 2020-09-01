@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+
 import List from "../VideoList/VideoList";
 import "./Header.css";
 import { getSearchData } from "../API/Youtube";
@@ -49,7 +51,7 @@ export default () => {
         </Head>
 
         <FormWrapper>
-          <div onSubmit="event.preventDefault()" className="search-form">
+          <div className="search-form">
             <input
               id="search"
               type="search"
@@ -67,7 +69,12 @@ export default () => {
             </button>
           </div>
         </FormWrapper>
-        <IconWrapper></IconWrapper>
+        <IconWrapper>
+          <a href="https://github.com/kanwargill1992/Melomaniac">
+            <AiFillGithub size={40} style={{ color: "white" }} />
+          </a>
+          <AiFillLinkedin size={40} style={{ color: "white" }} />
+        </IconWrapper>
       </ContentWrapper>
       <List searchSongData={searchSongData} />
     </>
@@ -113,4 +120,8 @@ const FormWrapper = styled.div`
   margin-right: 0.7rem;
 `;
 
-const IconWrapper = styled.div``;
+const IconWrapper = styled.div`
+  cursor: pointer;
+  margin-right: 0.7rem;
+  margin-top: 0.6rem;
+`;

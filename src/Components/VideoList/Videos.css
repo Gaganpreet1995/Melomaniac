@@ -33,9 +33,9 @@
   padding: 20px;
   margin-top: 25px;
 }
-.card_datails h1 {
+/* .card_datails h1 {
   font-size: 20px;
-}
+} */
 .card_right img {
   height: 395px;
   border-radius: 2px;
@@ -44,7 +44,7 @@
   border-radius: 2px;
 }
 
-.card_cat {
+/* .card_cat {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,7 +52,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
+} */
 
 .PG {
   background: #ec407a;
@@ -91,7 +91,7 @@ button:hover {
   background: rgba(0, 244, 170, 0.4);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
-.fa-play-circle {
+.circle {
   cursor: pointer;
   color: #255;
   font-size: 300px;
@@ -100,7 +100,7 @@ button:hover {
   animation: bounce 1s -0.4s infinite;
 }
 
-.fa-play-circle:hover {
+.circle:hover {
   color: aqua;
   animation: bounce 0.4s infinite;
 }

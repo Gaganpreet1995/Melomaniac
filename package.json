@@ -25,6 +25,7 @@
     "simple-youtube-api": "^5.2.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.1",
+    "video-react": "^0.14.1",
     "ytdl-core": "^3.2.2"
   },
   "scripts": {

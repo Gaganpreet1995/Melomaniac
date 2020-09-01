@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'Rubik', sans-serif;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
 
   h1 {

@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { AnimateOnChange } from "react-animation";
 import styled from "styled-components";
 
-import "./Animation.scss";
+import "./Animation.css";
 
 export default () => {
   const words = [
     "Maniac",
     "Techno",
     "Trance",
-    "Ciraz",
+    "Ciraz D",
     "Pryda",
     "Anna",
     "Tech",

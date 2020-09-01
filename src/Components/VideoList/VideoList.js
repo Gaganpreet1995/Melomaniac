@@ -116,7 +116,7 @@ export default class videolist extends Component {
         loading: true,
       });
 
-      let songUrl = await axios(`http://localhost:5000/download?URL=${songId}`);
+      let songUrl = await axios(`http://localhost:8000/download?URL=${songId}`);
 
       await this.setState({
         playerSongUrl: songUrl.data,
@@ -231,7 +231,7 @@ export default class videolist extends Component {
                             <div className="play_btn">
                               <AiFillPlayCircle
                                 size={60}
-                                className="fa-play-circle"
+                                className="circle"
                                 onClick={() =>
                                   this.props.fetchSongId(ob.id, ob.title)
                                 }
