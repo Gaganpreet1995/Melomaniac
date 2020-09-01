@@ -19,10 +19,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default class videolist extends Component {
   state = {
-    popular: [],
-    bollywood: [],
-    hollywood: [],
-    gazal: [],
+    techno: [],
+    pryda: [],
+    tech: [],
+    house: [],
     playerSongUrl: "",
     playerSongTitle: "",
     playsong: false,
@@ -56,7 +56,7 @@ export default class videolist extends Component {
       });
     });
 
-    await this.setState({ popular: data });
+    await this.setState({ techno: data });
   };
 
   getPrydaSongs = async () => {
@@ -72,7 +72,7 @@ export default class videolist extends Component {
       });
     });
 
-    await this.setState({ bollywood: data });
+    await this.setState({ pryda: data });
   };
 
   getTechSongs = async () => {
@@ -88,7 +88,7 @@ export default class videolist extends Component {
       });
     });
 
-    await this.setState({ hollywood: data });
+    await this.setState({ tech: data });
   };
 
   getHouseList = async () => {
@@ -104,7 +104,7 @@ export default class videolist extends Component {
       });
     });
 
-    await this.setState({ gazal: data });
+    await this.setState({ house: data });
   };
 
   getSongData = async (songId, title) => {
@@ -250,7 +250,7 @@ export default class videolist extends Component {
           )}
           <Slide
             fetchSongId={this.getSongData}
-            data={this.state.popular}
+            data={this.state.techno}
             title={"Techno"}
           />
 
@@ -258,7 +258,7 @@ export default class videolist extends Component {
           <br></br>
           <Slide
             fetchSongId={this.getSongData}
-            data={this.state.bollywood}
+            data={this.state.pryda}
             title={"Eric Prydz"}
           />
 
@@ -267,7 +267,7 @@ export default class videolist extends Component {
 
           <Slide
             fetchSongId={this.getSongData}
-            data={this.state.hollywood}
+            data={this.state.tech}
             title={"Boris Brejcha"}
           />
 
@@ -276,7 +276,7 @@ export default class videolist extends Component {
 
           <Slide
             fetchSongId={this.getSongData}
-            data={this.state.gazal}
+            data={this.state.house}
             title={"Tech House"}
           />
 

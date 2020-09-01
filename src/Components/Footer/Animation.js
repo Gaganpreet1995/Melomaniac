@@ -19,7 +19,7 @@ export default () => {
     "Hip Hop",
     "Boris Brejcha",
     "Adam Bayer",
-    "Armin V Burren",
+    "Armin Van Burren",
     "Above and Beyond",
   ];
 
@@ -41,7 +41,6 @@ export default () => {
     const interval = setInterval(() => {
       setCurrent(nextItem(current));
       nextTextRef.current.innerText = words[nextItem(current)];
-      // const nextTextSize = nextTextRef.current.offsetWidth;
       setCurrentWidth(nextTextRef.current.offsetWidth);
       setCurrentTextStyle({
         opacity: 0,
