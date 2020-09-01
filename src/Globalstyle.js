@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'Rubik', sans-serif;
-    /* box-sizing: border-box; */
   }
 
   h1 {
@@ -25,19 +24,6 @@ const GlobalStyle = createGlobalStyle`
     list-style-type: none;
   }
 
-  /* button {
-    border: 1px solid #ccc;
-    background: none;
-    padding: 12px 10px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    
-    &:hover {
-      background: #00c9ff;
-      color: white;
-    }
-  } */
 `;
 
 export default GlobalStyle;

@@ -44,8 +44,8 @@ export default class videolist extends Component {
   };
 
   getTechnoList = async () => {
-    var trendingList = await getTechnoList();
-    console.log(trendingList);
+    let trendingList = await getTechnoList();
+    console.log("Data trending", trendingList);
     const data = [];
 
     await trendingList.map((ob) => {

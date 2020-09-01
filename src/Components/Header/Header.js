@@ -14,7 +14,7 @@ export default () => {
     const songData = [];
 
     if (searchValue) {
-      var data = await getSearchData(searchValue);
+      let data = await getSearchData(searchValue);
 
       await data.map((ob) => {
         songData.push({
@@ -73,7 +73,9 @@ export default () => {
           <a href="https://github.com/kanwargill1992/Melomaniac">
             <AiFillGithub size={40} style={{ color: "white" }} />
           </a>
-          <AiFillLinkedin size={40} style={{ color: "white" }} />
+          <a href="https://www.linkedin.com/in/kanwar-gill/">
+            <AiFillLinkedin size={40} style={{ color: "white" }} />
+          </a>
         </IconWrapper>
       </ContentWrapper>
       <List searchSongData={searchSongData} />
